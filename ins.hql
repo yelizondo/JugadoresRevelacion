@@ -109,11 +109,7 @@ select PlayerName, BirthDate, LastUpdated, HighestMarketValueDate from tmp_Europ
 
 select substring(LastUpdated,15),substring(LastUpdated2,0,5) from tmp_EuropeanRosters;
 
-
-
-
-
-
+-- TABLAS
 
 DROP TABLE IF EXISTS tmp_country;
 CREATE TABLE IF NOT EXISTS tmp_country (
@@ -122,3 +118,25 @@ CREATE TABLE IF NOT EXISTS tmp_country (
 ) row format delimited fields terminated by ',';
 
 load data inpath '/data/input/soccer/Country.csv' into table tmp_country;
+
+DROP TABLE IF EXISTS tmp_league;
+CREATE TABLE IF NOT EXISTS tmp_league (
+    id int,
+    country_id int,
+    name string
+) row format delimited fields terminated by ',';
+
+load data inpath '/data/input/soccer/League.csv' into table tmp_league;
+
+DROP TABLE IF EXISTS tmp_player;
+CREATE TABLE IF NOT EXISTS tmp_player (
+    id int,
+    player_api_id int,
+    player_name string,
+    player_fifa_api_id int,
+    birthday timestamp,
+    height double,
+    weight double
+) row format delimited fields terminated by ',';
+
+load data inpath '/data/input/soccer/Player.csv' into table tmp_player;
