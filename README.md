@@ -1,5 +1,5 @@
-## Repository for course: database II
-This readme helps you to perform the intended labs in classroom regarding topics such as mapreduce with hadoop, hive, spark and kafka.
+## Repository for second project database II
+This project intends to use two data sets in order to predict the value of a given player.
 
 ### docker related  
 Build the image, create an internal network and run the image using a local volumen
