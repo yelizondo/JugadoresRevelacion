@@ -10,6 +10,7 @@ docker build . -t hadoop
 docker network create --driver bridge --subnet 10.0.0.0/28 littlenet
 
 docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v /Users/desarrollador/Projects/hadoopbases2/mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
+//docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\Users\Mau\Documents\TEC\2020\Semestre II\Bases II\Progra II\JugadoresRevelacion\mapr":/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
 ```
 
 This is an example of how to manually copy files from the host to the container 
@@ -36,12 +37,23 @@ start-all.sh
 stop-all.sh
 ```
 
+### MapR related
+Commands to navigate to the necessary folder.
+```
+cd mapr
+hdfs dfs -rm -r /data/output/
+hadoop fs -ls /data
+hadoop fs -cat /data/output/part-r-00000
+/opt/hadoop/hadoop-3.3.0/logs/userlogs/application_1610938886733_0004/container_1610938886733_0004_01_000002
+/home/hadoopuser/mapr
+```
+
 These are example of instructions to prepare hdfs folders and run a map reduce example
 ```
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
-hadoop fs -copyFromLocal datasales.dat /data/input
-hadoop jar maprexample.jar main.program /data/input/datadates.csv /data/output
+hadoop fs -copyFromLocal European_Rosters.csv /data/input
+hadoop jar market.jar main.program /data/input/European_Rosters.csv /data/output
 ```
 
 ### hive related
