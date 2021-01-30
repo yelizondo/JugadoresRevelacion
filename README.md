@@ -42,14 +42,14 @@ Commands to navigate to the necessary folder.
 ```
 cd mapr
 hdfs dfs -rm -r /data/output/
-hadoop fs -ls /data
 hadoop fs -cat /data/output/part-r-00000
-/opt/hadoop/hadoop-3.3.0/logs/userlogs/application_1610938886733_0004/container_1610938886733_0004_01_000002
-/home/hadoopuser/mapr
+cat ../../../opt/hadoop/hadoop-3.3.0/logs/userlogs/application_1611384061794_0019/container_1611384061794_0019_01_000003/stdout
+../../../../../../../../home/hadoopuser/mapr
 ```
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
 ```
+cd mapr
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
 hadoop fs -copyFromLocal European_Rosters.csv /data/input
