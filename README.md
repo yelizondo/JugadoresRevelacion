@@ -16,6 +16,8 @@ This is an example of how to manually copy files from the host to the container
 ```
 docker cp maprexample.jar hadoopserver:/home/hadoopuser
 docker cp datadates.csv  hadoopserver:/home/hadoopuser
+
+docker cp  datasets/ hadoopserver:/home/hadoopuser/datasets
 ```
 
 ### ssh related
@@ -40,7 +42,9 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 ```
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
+hadoop fs -mkdir /data/input/soccer
 hadoop fs -copyFromLocal datasales.dat /data/input
+hadoop fs -copyFromLocal datasets/soccer/ /data/input/
 hadoop jar maprexample.jar main.program /data/input/datadates.csv /data/output
 ```
 
@@ -105,4 +109,6 @@ group by anyo;
 To start the kafkta server just the script `start-kafka.sh` located in the hadoopuser home folder.
 
 To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
+
+Premier League  {Michail Antonio=ArrayWritable [valueClass=class org.apache.hadoop.io.Text, values=[29, Forward , , England, 0, "Last update: Jun 13,  2019"]]}
 
