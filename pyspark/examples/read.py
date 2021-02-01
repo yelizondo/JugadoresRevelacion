@@ -1,6 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import (IntegerType, FloatType, StructField,
-                               StructType, TimestampType, StringType)
+from pyspark.sql.types import (FloatType, StructField, StructType, StringType)
 from pyspark.sql.functions import col, to_date
 
 spark = SparkSession.builder.appName("Read Transactions").getOrCreate()

@@ -1,33 +1,16 @@
-from datetime import datetime
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, date_format, to_date, year
-from pyspark.sql.types import (DateType, IntegerType, FloatType, StructField,
-                               StructType, TimestampType, StringType)
+from pyspark.sql.functions import col
+from pyspark.sql.types import (DateType, FloatType, StructField, StructType, StringType)
 
-spark = SparkSession.builder.appName("Read Transactions").getOrCreate()
+spark = SparkSession.builder.appName("Calculate score").getOrCreate()
 
-csv_schema = StructType([StructField('fecha', StringType()),
-                         StructField('amount', FloatType())
-                         ])
+mapr_schema = StructType([StructField('name2', StringType()), StructField('future', FloatType())])
+hive_schema = StructType([StructField('name', StringType()), StructField('team', StringType()), StructField('current', FloatType())])
 
-dataframe = spark.read.csv("datasales.dat",
-                           schema=csv_schema,
-                           header=True)
+hive_dataframe = spark.read.csv("hive.csv", schema=hive_schema, header=False)
 
-dataframe = dataframe.withColumn('fecha',to_date(col('fecha'), 'MM/dd/yyyy'))
-dataframe.show()
+mapr_dataframe = spark.read.csv("mapr.csv", schema=mapr_schema, header=False)
 
-
-# Group By and Select the data already aggregated
-dataframe = dataframe.withColumn('year',year('fecha'))
-dataframe.show()
-
-sum_df = dataframe.groupBy("year").sum()
-
-dataframe = \
-    sum_df.select(
-        col('year'),
-        col('sum(amount)').alias('amountperyear'))
-
-dataframe.printSchema()
-dataframe.show()
+shared = hive_dataframe.join(mapr_dataframe,hive_dataframe["name"]==mapr_dataframe["name2"],"inner")
+shared = shared.drop("name2")
+shared.show()

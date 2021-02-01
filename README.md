@@ -13,12 +13,6 @@ docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v /Users/desarrollador/Projec
 //docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\Users\Mau\Documents\TEC\2020\Semestre II\Bases II\Progra II\JugadoresRevelacion\mapr":/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
 ```
 
-This is an example of how to manually copy files from the host to the container 
-```
-docker cp maprexample.jar hadoopserver:/home/hadoopuser
-docker cp datadates.csv  hadoopserver:/home/hadoopuser
-```
-
 ### ssh related
 The image includes a default user setup, the user "hadoopuser" must grant passwordless access by ssh, this is required for the hadoop server
 
@@ -38,23 +32,25 @@ stop-all.sh
 ```
 
 ### MapR related
-Commands to navigate to the necessary folder.
-```
-cd mapr
-hdfs dfs -rm -r /data/output/
-hadoop fs -cat /data/output/part-r-00000
-cat ../../../opt/hadoop/hadoop-3.3.0/logs/userlogs/application_1611384061794_0019/container_1611384061794_0019_01_000003/stdout
-../../../../../../../../home/hadoopuser/mapr
-```
-
-These are example of instructions to prepare hdfs folders and run a map reduce example
+Instructions to prepare hdfs folders and run a map reduce
 ```
 cd mapr
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
 hadoop fs -copyFromLocal European_Rosters.csv /data/input
 hadoop jar market.jar main.program /data/input/European_Rosters.csv /data/output
+hadoop fs -get /data/output/part-r-00000
+mv part-r-00000 mapr.csv
 ```
+
+Commands to access results
+```
+hdfs dfs -rm -r /data/output/
+hadoop fs -cat /data/output/part-r-00000
+cat ../../../opt/hadoop/hadoop-3.3.0/logs/userlogs/application_1612109796205_0006/container_1612109796205_0006_01_000003/stdout
+../../../../../../../../home/hadoopuser/mapr
+```
+
 
 ### hive related
 To setup the hive environment just run the `hive-setup.sh` script located in hadoopuser home folder
