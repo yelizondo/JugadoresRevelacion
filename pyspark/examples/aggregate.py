@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 from pyspark.sql.types import (DateType, FloatType, StructField, StructType, StringType)
+import json
 
 spark = SparkSession.builder.appName("Calculate score").getOrCreate()
 
@@ -17,8 +18,8 @@ shared = shared.drop("name2")
 dictionary = {}
 
 def depreciate(stats, res):
-    print("Depreciate")
-    print("Init stats: ", stats)
+    #print("Depreciate")
+    #print("Init stats: ", stats)
     if res <= 0.1:
         stats = stats * (1 - res)
     elif res > 0.1 and res <= 0.2:
@@ -31,14 +32,14 @@ def depreciate(stats, res):
         stats = stats * (1 - res*1.8)
     else:
         stats = stats * 0.5
-    print("End stats: ", stats)
-    print("")
+    #print("End stats: ", stats)
+    #print("")
     return stats
 
 
 def inflate(stats, res):
-    print("Inflate")
-    print("Init stats: ", stats)
+    #print("Inflate")
+    #print("Init stats: ", stats)
     if res >= 0.9:
         stats = stats + (stats/2) * res
     elif res > 0.1 and res <= 0.2:
@@ -51,12 +52,14 @@ def inflate(stats, res):
         stats = stats + (stats/2) * (res * 0.2)
     else:
         stats = stats + (stats/2) * (res * 0.1)
-    print("End stats: ", stats)
-    print("")
+    #print("End stats: ", stats)
+    #print("")
     return stats
 
 def equal(stats, res):
     return stats
+
+teams = []
 
 for row in shared.rdd.collect():
     name = row.name
@@ -75,12 +78,25 @@ for row in shared.rdd.collect():
     
     try:
         temp = dictionary[team]
-        temp = temp + [[name, val]]
+        #temp["children"] = temp["children"] + [[name, val]]
+        temp["children"] = temp["children"] + [{"name": name, "value": val}]
         dictionary[team] = temp
     except:
-        dictionary[team] = [[name, val]]
+        mini1 = {"name": name, "value": val}
+        macro = {"name": team, "children": [mini1]}
+        dictionary[team] = macro
+        teams = teams + [team]
+    
 
-print(dictionary)
+
+dict2 = {}
+
+for i in teams:
+    f = dictionary[i]
+    dict2.update(f)
+
+json_object = json.dumps(dict2, indent = 4)   
+print(json_object)  
     
 
 #shared.show()
