@@ -20,16 +20,17 @@ dictionary = {}
 def depreciate(stats, res):
     #print("Depreciate")
     #print("Init stats: ", stats)
+    #print("Res:", res)
     if res <= 0.1:
         stats = stats * (1 - res)
     elif res > 0.1 and res <= 0.2:
-        stats = stats * (1 - res*1.2)
+        stats = stats * (0.9)
     elif res > 0.2 and res <= 0.3:
-        stats = stats * (1 - res*1.4)
+        stats = stats * (0.8)
     elif res > 0.3 and res <= 0.4:
-        stats = stats * (1 - res*1.6)
+        stats = stats * (0.7)
     elif res > 0.4 and res <= 0.5:
-        stats = stats * (1 - res*1.8)
+        stats = stats * (0.6)
     else:
         stats = stats * 0.5
     #print("End stats: ", stats)
@@ -41,17 +42,17 @@ def inflate(stats, res):
     #print("Inflate")
     #print("Init stats: ", stats)
     if res >= 0.9:
-        stats = stats + (stats/2) * res
+        stats = stats +  res
     elif res > 0.1 and res <= 0.2:
-        stats = stats + (stats/2) * (res * 0.8)
+        stats = stats + (res * 0.8)
     elif res > 0.2 and res <= 0.3:
-        stats = stats + (stats/2) * (res * 0.6)
+        stats = stats + (res * 0.6)
     elif res > 0.3 and res <= 0.4:
-        stats = stats + (stats/2) * (res * 0.4)
+        stats = stats + (res * 0.4)
     elif res > 0.4 and res <= 0.5:
-        stats = stats + (stats/2) * (res * 0.2)
+        stats = stats + (res * 0.2)
     else:
-        stats = stats + (stats/2) * (res * 0.1)
+        stats = stats +  (res * 0.1)
     #print("End stats: ", stats)
     #print("")
     return stats
@@ -76,9 +77,10 @@ for row in shared.rdd.collect():
     else:
         val = equal(stats, res)
     
+    print(val)
+    
     try:
         temp = dictionary[team]
-        #temp["children"] = temp["children"] + [[name, val]]
         temp["children"] = temp["children"] + [{"name": name, "value": val}]
         dictionary[team] = temp
     except:
@@ -87,16 +89,16 @@ for row in shared.rdd.collect():
         dictionary[team] = macro
         teams = teams + [team]
     
-
-
-dict2 = {}
+j = []
 
 for i in teams:
     f = dictionary[i]
-    dict2.update(f)
+    j = j + [f]
+
+dict2 = {"name": "Bundesliga", "children":j}   
 
 json_object = json.dumps(dict2, indent = 4)   
-print(json_object)  
-    
 
-#shared.show()
+file = open("2017 predictions.json", "w")
+file.write(json_object)
+file.close()
