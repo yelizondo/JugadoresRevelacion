@@ -18,6 +18,8 @@ docker cp maprexample.jar hadoopserver:/home/hadoopuser
 docker cp datadates.csv  hadoopserver:/home/hadoopuser
 
 docker cp  datasets/ hadoopserver:/home/hadoopuser/datasets
+mv result/000000_0 result/hive.csv
+docker cp hadoopserver:/home/hadoopuser/result/hive.csv hive.csv
 ```
 
 ### ssh related
@@ -43,8 +45,9 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
 hadoop fs -mkdir /data/input/soccer
-hadoop fs -copyFromLocal datasales.dat /data/input
 hadoop fs -copyFromLocal datasets/soccer/ /data/input/
+
+hadoop fs -copyFromLocal datasales.dat /data/input
 hadoop jar maprexample.jar main.program /data/input/datadates.csv /data/output
 ```
 
