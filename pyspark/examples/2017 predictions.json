@@ -1,0 +1,721 @@
+{
+    "name": "Bundesliga",
+    "children": [
+        {
+            "name": "Hannover 96",
+            "children": [
+                {
+                    "name": "Adam Szalai",
+                    "value": 0.4368839979171753
+                },
+                {
+                    "name": "Andre Hoffmann",
+                    "value": 0.4656341552734375
+                },
+                {
+                    "name": "Felix Klaus",
+                    "value": 0.46377963423728946
+                },
+                {
+                    "name": "Kenan Karaman",
+                    "value": 0.38103249967098235
+                },
+                {
+                    "name": "Manuel Schmiedebach",
+                    "value": 0.40792083740234375
+                },
+                {
+                    "name": "Marius Wolf",
+                    "value": 0.4576263725757599
+                },
+                {
+                    "name": "Salif Sane",
+                    "value": 0.5072999954223633
+                }
+            ]
+        },
+        {
+            "name": "Bayer 04 Leverkusen",
+            "children": [
+                {
+                    "name": "Admir Mehmedi",
+                    "value": 0.7185000061988831
+                },
+                {
+                    "name": "Charles Aranguiz",
+                    "value": 0.7451325118541717
+                },
+                {
+                    "name": "Christoph Kramer",
+                    "value": 0.5145000100135803
+                },
+                {
+                    "name": "Julian Brandt",
+                    "value": 0.487602511048317
+                },
+                {
+                    "name": "Karim Bellarabi",
+                    "value": 0.4502244651317596
+                },
+                {
+                    "name": "Kevin Kampl",
+                    "value": 0.7797731161117554
+                },
+                {
+                    "name": "Lars Bender",
+                    "value": 0.4217100143432617
+                },
+                {
+                    "name": "Omer Toprak",
+                    "value": 0.4164150059223175
+                },
+                {
+                    "name": "Tin Jedvaj",
+                    "value": 0.466541251540184
+                },
+                {
+                    "name": "Wendell",
+                    "value": 0.5897831320762634
+                }
+            ]
+        },
+        {
+            "name": "FC Augsburg",
+            "children": [
+                {
+                    "name": "Alexander Esswein",
+                    "value": 0.37486199140548704
+                },
+                {
+                    "name": "Alfred Finnbogason",
+                    "value": 0.7759195666844398
+                },
+                {
+                    "name": "Daniel Baier",
+                    "value": 0.3640071451663971
+                },
+                {
+                    "name": "Dominik Kohr",
+                    "value": 0.4617778092622757
+                },
+                {
+                    "name": "Jan Moravek",
+                    "value": 0.34230000972747804
+                },
+                {
+                    "name": "Jeffrey Gouweleeuw",
+                    "value": 0.6917399883270264
+                },
+                {
+                    "name": "Konstantinos Stafylidis",
+                    "value": 0.4629285156726837
+                },
+                {
+                    "name": "Marwin Hitz",
+                    "value": 0.44873849153518675
+                },
+                {
+                    "name": "Philipp Max",
+                    "value": 0.4577775239944458
+                }
+            ]
+        },
+        {
+            "name": "1. FSV Mainz 05",
+            "children": [
+                {
+                    "name": "Alexander Hack",
+                    "value": 0.5525316715240478
+                },
+                {
+                    "name": "Christian Clemens",
+                    "value": 0.3791937530040741
+                },
+                {
+                    "name": "Daniel Brosinski",
+                    "value": 0.5653788447380066
+                },
+                {
+                    "name": "Danny Latza",
+                    "value": 0.44534611223578136
+                },
+                {
+                    "name": "Florian Niederlechner",
+                    "value": 0.4302684277296066
+                },
+                {
+                    "name": "Jhon Cordoba",
+                    "value": 0.5060834884643555
+                },
+                {
+                    "name": "Julian Baumgartlinger",
+                    "value": 0.4116573631763458
+                },
+                {
+                    "name": "Karim Onisiwo",
+                    "value": 0.6957599997520447
+                },
+                {
+                    "name": "Stefan Bell",
+                    "value": 0.4063858985900879
+                },
+                {
+                    "name": "Suat Serdar",
+                    "value": 0.4406137585639954
+                },
+                {
+                    "name": "Yunus Malli",
+                    "value": 0.3371741890907287
+                }
+            ]
+        },
+        {
+            "name": "SC Freiburg",
+            "children": [
+                {
+                    "name": "Alexander Schwolow",
+                    "value": 0.6781699895858765
+                },
+                {
+                    "name": "Gelson Fernandes",
+                    "value": 0.36023056507110596
+                },
+                {
+                    "name": "Mike Frantz",
+                    "value": 0.37216201424598694
+                },
+                {
+                    "name": "Nils Petersen",
+                    "value": 0.6316887080669403
+                }
+            ]
+        },
+        {
+            "name": "VfB Stuttgart",
+            "children": [
+                {
+                    "name": "Alexandru Maxim",
+                    "value": 0.40934106707572937
+                },
+                {
+                    "name": "Carlos Gruezo",
+                    "value": 0.4688792109489441
+                },
+                {
+                    "name": "Christian Gentner",
+                    "value": 0.4140285849571228
+                },
+                {
+                    "name": "Daniel Ginczek",
+                    "value": 0.6882400541717715
+                },
+                {
+                    "name": "Filip Kostic",
+                    "value": 0.6923346877098083
+                },
+                {
+                    "name": "Lukas Rupp",
+                    "value": 0.3782857179641724
+                },
+                {
+                    "name": "Matthias Zimmermann",
+                    "value": 0.6443333387374878
+                },
+                {
+                    "name": "Rani Khedira",
+                    "value": 0.47820000946521757
+                },
+                {
+                    "name": "Sven Ulreich",
+                    "value": 0.5460477113723754
+                },
+                {
+                    "name": "Timo Werner",
+                    "value": 0.7415282487869262
+                }
+            ]
+        },
+        {
+            "name": "FC Ingolstadt 04",
+            "children": [
+                {
+                    "name": "Alfredo Morales",
+                    "value": 0.5809111893177032
+                },
+                {
+                    "name": "Danny da Costa",
+                    "value": 0.5468177914619445
+                },
+                {
+                    "name": "Markus Suttner",
+                    "value": 0.37334856986999515
+                }
+            ]
+        },
+        {
+            "name": "Borussia M\u00f6nchengladbach",
+            "children": [
+                {
+                    "name": "Andre Hahn",
+                    "value": 0.38912731409072876
+                },
+                {
+                    "name": "Fabian Johnson",
+                    "value": 0.4215578556060791
+                },
+                {
+                    "name": "Ibrahima Traore",
+                    "value": 0.4148833453655243
+                },
+                {
+                    "name": "Jonas Hofmann",
+                    "value": 0.5900279939174652
+                },
+                {
+                    "name": "Lars Stindl",
+                    "value": 0.4984533190727234
+                },
+                {
+                    "name": "Mahmoud Dahoud",
+                    "value": 0.3549223929643631
+                },
+                {
+                    "name": "Martin Hinteregger",
+                    "value": 0.4983412384986877
+                },
+                {
+                    "name": "Nico Elvedi",
+                    "value": 0.3304107278585434
+                },
+                {
+                    "name": "Oscar Wendt",
+                    "value": 0.36307811737060547
+                },
+                {
+                    "name": "Patrick Herrmann",
+                    "value": 0.3440229296684265
+                },
+                {
+                    "name": "Raffael",
+                    "value": 0.41653844714164734
+                },
+                {
+                    "name": "Thorgan Hazard",
+                    "value": 0.7892983973026275
+                },
+                {
+                    "name": "Tobias Sippel",
+                    "value": 0.3727499842643738
+                },
+                {
+                    "name": "Tony Jantschke",
+                    "value": 0.33961665630340576
+                },
+                {
+                    "name": "Yann Sommer",
+                    "value": 0.7021149873733521
+                }
+            ]
+        },
+        {
+            "name": "TSG 1899 Hoffenheim",
+            "children": [
+                {
+                    "name": "Andrej Kramaric",
+                    "value": 0.7366174817085266
+                },
+                {
+                    "name": "Ermin Bicakcic",
+                    "value": 0.6937087297439576
+                },
+                {
+                    "name": "Jonathan Schmid",
+                    "value": 0.5609996974468231
+                },
+                {
+                    "name": "Kevin Volland",
+                    "value": 0.806030267996853
+                },
+                {
+                    "name": "Mark Uth",
+                    "value": 0.3386657238006592
+                },
+                {
+                    "name": "Nadiem Amiri",
+                    "value": 0.48736234903335574
+                },
+                {
+                    "name": "Oliver Baumann",
+                    "value": 0.5801600158214568
+                },
+                {
+                    "name": "Pavel Kaderabek",
+                    "value": 0.6721044659614563
+                },
+                {
+                    "name": "Philipp Ochs",
+                    "value": 0.39544499516487125
+                },
+                {
+                    "name": "Sebastian Rudy",
+                    "value": 0.38921666145324707
+                },
+                {
+                    "name": "Steven Zuber",
+                    "value": 0.5484599769115448
+                },
+                {
+                    "name": "Tobias Strobl",
+                    "value": 0.5956371784210205
+                }
+            ]
+        },
+        {
+            "name": "1. FC K\u00f6ln",
+            "children": [
+                {
+                    "name": "Anthony Modeste",
+                    "value": 0.41539105772972107
+                },
+                {
+                    "name": "Dominique Heintz",
+                    "value": 0.5300004780292511
+                },
+                {
+                    "name": "Jonas Hector",
+                    "value": 0.4026845335960388
+                },
+                {
+                    "name": "Kevin Vogt",
+                    "value": 0.5773537516593933
+                },
+                {
+                    "name": "Leonardo Bittencourt",
+                    "value": 0.7512011289596557
+                },
+                {
+                    "name": "Marcel Risse",
+                    "value": 0.38963332772254944
+                },
+                {
+                    "name": "Thomas Kessler",
+                    "value": 0.3317100048065185
+                },
+                {
+                    "name": "Timo Horn",
+                    "value": 0.4768799901008606
+                },
+                {
+                    "name": "Yannick Gerhardt",
+                    "value": 0.4711749881505966
+                },
+                {
+                    "name": "Yuya Osako",
+                    "value": 0.5945069046852325
+                }
+            ]
+        },
+        {
+            "name": "SV Werder Bremen",
+            "children": [
+                {
+                    "name": "Anthony Ujah",
+                    "value": 0.3534339368343353
+                },
+                {
+                    "name": "Claudio Pizarro",
+                    "value": 0.37377306818962097
+                },
+                {
+                    "name": "Davie Selke",
+                    "value": 0.5405920267105102
+                },
+                {
+                    "name": "Felix Kroos",
+                    "value": 0.36678467988967894
+                },
+                {
+                    "name": "Felix Wiedwald",
+                    "value": 0.3869035840034485
+                },
+                {
+                    "name": "Fin Bartels",
+                    "value": 0.3744099855422974
+                },
+                {
+                    "name": "Florian Grillitsch",
+                    "value": 0.4361749976873398
+                },
+                {
+                    "name": "Maximilian Eggestein",
+                    "value": 0.5168550133705139
+                },
+                {
+                    "name": "Milos Veljkovic",
+                    "value": 0.426431131362915
+                },
+                {
+                    "name": "Philipp Bargfrede",
+                    "value": 0.44527498483657835
+                },
+                {
+                    "name": "Raphael Wolf",
+                    "value": 0.30225610435009
+                },
+                {
+                    "name": "Theodor Gebre Selassie",
+                    "value": 0.46371317505836485
+                }
+            ]
+        },
+        {
+            "name": "VfL Wolfsburg",
+            "children": [
+                {
+                    "name": "Bas Dost",
+                    "value": 0.4658040046691894
+                },
+                {
+                    "name": "Daniel Caligiuri",
+                    "value": 0.549613755941391
+                },
+                {
+                    "name": "Ivan Perisic",
+                    "value": 0.45442600250244136
+                },
+                {
+                    "name": "Koen Casteels",
+                    "value": 0.6708439826965332
+                },
+                {
+                    "name": "Maximilian Arnold",
+                    "value": 0.9426242351531983
+                },
+                {
+                    "name": "Robin Knoche",
+                    "value": 0.45812666416168213
+                }
+            ]
+        },
+        {
+            "name": "Eintracht Frankfurt",
+            "children": [
+                {
+                    "name": "Bastian Oczipka",
+                    "value": 0.4802700161933899
+                },
+                {
+                    "name": "David Abraham",
+                    "value": 0.46639845371246336
+                },
+                {
+                    "name": "Kaan Ayhan",
+                    "value": 0.4405925005674362
+                },
+                {
+                    "name": "Kevin Trapp",
+                    "value": 0.4753140091896057
+                },
+                {
+                    "name": "Makoto Hasebe",
+                    "value": 0.3837999999523163
+                },
+                {
+                    "name": "Marco Russ",
+                    "value": 0.31176373958587644
+                },
+                {
+                    "name": "Mijat Gacinovic",
+                    "value": 0.6362000226974487
+                },
+                {
+                    "name": "Timothy Chandler",
+                    "value": 0.5606066703796387
+                }
+            ]
+        },
+        {
+            "name": "SC Paderborn 07",
+            "children": [
+                {
+                    "name": "Christian Strohdiek",
+                    "value": 0.3701159954071045
+                }
+            ]
+        },
+        {
+            "name": "FC Bayern Munich",
+            "children": [
+                {
+                    "name": "David Alaba",
+                    "value": 0.7282912552356721
+                },
+                {
+                    "name": "Diego Contento",
+                    "value": 0.33496248722076416
+                },
+                {
+                    "name": "Joshua Kimmich",
+                    "value": 0.44490447342395784
+                },
+                {
+                    "name": "Kingsley Coman",
+                    "value": 0.48573035597801206
+                },
+                {
+                    "name": "Manuel Neuer",
+                    "value": 0.4521041810512543
+                },
+                {
+                    "name": "Robert Lewandowski",
+                    "value": 0.5349141240119933
+                },
+                {
+                    "name": "Sebastian Rode",
+                    "value": 0.41278213262557983
+                }
+            ]
+        },
+        {
+            "name": "FC Schalke 04",
+            "children": [
+                {
+                    "name": "Fabian Giefer",
+                    "value": 0.35601070523262024
+                },
+                {
+                    "name": "Leon Goretzka",
+                    "value": 0.7702814936637878
+                },
+                {
+                    "name": "Marvin Friedrich",
+                    "value": 0.43385312855243685
+                },
+                {
+                    "name": "Matija Nastasic",
+                    "value": 0.6566343272755404
+                }
+            ]
+        },
+        {
+            "name": "Hertha BSC Berlin",
+            "children": [
+                {
+                    "name": "John Anthony Brooks",
+                    "value": 0.7591271877288819
+                },
+                {
+                    "name": "Julian Schieber",
+                    "value": 0.38254374265670776
+                },
+                {
+                    "name": "Marvin Plattenhardt",
+                    "value": 0.49030331969261165
+                },
+                {
+                    "name": "Mitchell Weiser",
+                    "value": 0.5716015934944153
+                },
+                {
+                    "name": "Nico Schulz",
+                    "value": 0.7125812530517578
+                },
+                {
+                    "name": "Niklas Stark",
+                    "value": 0.5725415647029877
+                },
+                {
+                    "name": "Per Ciljan Skjelbred",
+                    "value": 0.4258641958236694
+                },
+                {
+                    "name": "Peter Pekarik",
+                    "value": 0.39629998803138733
+                },
+                {
+                    "name": "Salomon Kalou",
+                    "value": 0.4197794198989868
+                },
+                {
+                    "name": "Sebastian Langkamp",
+                    "value": 0.4827479839324951
+                },
+                {
+                    "name": "Thomas Kraft",
+                    "value": 0.3877527713775635
+                },
+                {
+                    "name": "Vedad Ibisevic",
+                    "value": 0.3259125053882599
+                },
+                {
+                    "name": "Vladimir Darida",
+                    "value": 0.3593939542770386
+                }
+            ]
+        },
+        {
+            "name": "Borussia Dortmund",
+            "children": [
+                {
+                    "name": "Julian Weigl",
+                    "value": 0.5333305716514587
+                },
+                {
+                    "name": "Lukasz Piszczek",
+                    "value": 0.37588751316070557
+                },
+                {
+                    "name": "Marcel Schmelzer",
+                    "value": 0.3930499851703644
+                },
+                {
+                    "name": "Marco Reus",
+                    "value": 0.623903340101242
+                },
+                {
+                    "name": "Mats Hummels",
+                    "value": 0.44453269243240356
+                },
+                {
+                    "name": "Matthias Ginter",
+                    "value": 0.7773210346698761
+                },
+                {
+                    "name": "Neven Subotic",
+                    "value": 0.41862308979034424
+                },
+                {
+                    "name": "Nuri Sahin",
+                    "value": 0.4204113781452179
+                },
+                {
+                    "name": "Sven Bender",
+                    "value": 0.3755541741847992
+                }
+            ]
+        },
+        {
+            "name": "Eintracht Braunschweig",
+            "children": [
+                {
+                    "name": "Ken Reichel",
+                    "value": 0.35582556724548337
+                }
+            ]
+        },
+        {
+            "name": "Hamburger SV",
+            "children": [
+                {
+                    "name": "Lasse Sobiech",
+                    "value": 0.4203899949789047
+                },
+                {
+                    "name": "Michael Gregoritsch",
+                    "value": 0.4809460401535034
+                }
+            ]
+        }
+    ]
+}
