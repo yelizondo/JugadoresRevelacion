@@ -1,6 +1,5 @@
 package reducer;
 
-import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
@@ -54,10 +53,10 @@ public class SimpleReducer extends Reducer<Text, MapWritable, Text, Text> {
     		
     		score = calculateScore(pricePercent, dayDiff, position, age);
     		
-    		String t = player.toString() + ", " + score;
+    		String t = player.toString() + "," + score;
     		System.out.println(t);
     		
-    		context.write(new Text(), new Text(t));
+    		context.write(new Text(t), null);
     	}
 		
 		//context.write(player, mapF);
