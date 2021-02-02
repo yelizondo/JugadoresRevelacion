@@ -16,10 +16,12 @@ This is an example of how to manually copy files from the host to the container
 ```
 docker cp maprexample.jar hadoopserver:/home/hadoopuser
 docker cp datadates.csv  hadoopserver:/home/hadoopuser
-
+```
+Get result from hive
+```
 docker cp  datasets/ hadoopserver:/home/hadoopuser/datasets
 mv result/000000_0 result/hive.csv
-docker cp hadoopserver:/home/hadoopuser/result/hive.csv hive.csv
+docker cp hadoopserver:/home/hadoopuser/result/hive.csv pyspark/examples/hive.csv
 ```
 
 ### ssh related
@@ -41,6 +43,7 @@ stop-all.sh
 ```
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
+Directories for Hive input
 ```
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
@@ -58,46 +61,6 @@ Then access the hive console with `hive`
 
 The following is an example of instructions in hive console to test your hive environment. The example loads the content of the CSV file datasales.dat into a temporary table where all the fields are string. Following the transfer of the data to the correct table using data types. 
 
-```
-create schema <name>; // to create an schema
-
-create table tmp_sales(fecha string, monto decimal(10,2)) row format delimited fields terminated by ',';
-
-create table tmp_EuropeanRosters(
-    FullName string, 
-    PlayerName string, 
-    Affiliation string, 
-    League string, 
-    BirthDate string,
-    Age string, 
-    Height string, 
-    Position string, 
-    Position2 string, 
-    Nationality string, 
-    GamesPlayed string, 
-    MarketValue string, 
-    LastUpdated string, 
-    Accumulated string, 
-    HighestMartketValue string, 
-    HighestMarketValueDate string, 
-    NationalTeam string, 
-    MostRecentInjury string
-) row format delimited fields terminated by ',';
-
-load data inpath '/data/input/European_Rosters_Mini.csv' into table tmp_EuropeanRosters;
-
-load data inpath '/data/input/datasales.dat' into table tmp_sales;
-
-CREATE TABLE IF NOT EXISTS sales ( fecha timestamp, monto decimal(10,2))
-COMMENT 'Ventas por mes por anyo'
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
-
-insert into table sales select from_unixtime(unix_timestamp(fecha, 'MM/dd/yyyy')), monto from tmp_sales;
-```
-
 Once data is loaded, run some queries to test the performance 
 ```
 SELECT MONTH(fecha), YEAR(fecha), SUM(monto) from sales group by YEAR(fecha), MONTH(fecha);
@@ -111,7 +74,4 @@ group by anyo;
 ### Kakfa related
 To start the kafkta server just the script `start-kafka.sh` located in the hadoopuser home folder.
 
-To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
-
-Premier League  {Michail Antonio=ArrayWritable [valueClass=class org.apache.hadoop.io.Text, values=[29, Forward , , England, 0, "Last update: Jun 13,  2019"]]}
-
+To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart)
