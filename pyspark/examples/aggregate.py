@@ -99,6 +99,6 @@ dict2 = {"name": "Bundesliga", "children":j}
 
 json_object = json.dumps(dict2, indent = 4)   
 
-file = open("2017 predictions.json", "w")
+file = open("2017predictions.json", "w")
 file.write(json_object)
 file.close()

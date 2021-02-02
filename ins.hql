@@ -425,9 +425,6 @@ FROM tmp_player P
     )
 WHERE P.player_api_id is not null;
 
-
-
-
 DROP TABLE IF EXISTS playersWithTeam;
 CREATE TABLE IF NOT EXISTS playersWithTeam ( 
     player_name string,
@@ -439,7 +436,7 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
 
-INSERT INTO TABLE playersWithTeam;
+INSERT INTO TABLE playersWithTeam
 SELECT P.player_name, P.team_name
 FROM playersWithTeamDates P
     JOIN (SELECT player_name, max(unix_timestamp(datef, 'yyyy-MM-dd')) datef FROM playersWithTeamDates GROUP BY player_name) maxD
